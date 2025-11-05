@@ -27,6 +27,7 @@
   min-width: 129px;
   min-height: 42px;
   transition: 0.3s ease;
+  padding: 10px 24px;
 }
 main {
   background-color: #fff;

@@ -1,0 +1,161 @@
+.furniture-list-section {
+  padding: 48px 0;
+}
+
+.furniture-list-text-section {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 40px;
+}
+
+.furniture-list-title {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.2;
+}
+
+.furniture-list-subtitle {
+  font-size: 18px;
+}
+
+.furniture-categories-list {
+  margin-bottom: 40px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.furniture-categories-list-item {
+  border-radius: 8px;
+  width: calc((100% - 16px) / 2);
+  height: 122px;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.furniture-categories-list-item:hover,
+.furniture-categories-list-item:focus {
+  border: 8px solid #6b0609;
+  cursor: pointer;
+}
+
+.current-category {
+  border: 8px solid #6b0609;
+}
+
+.category-name {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 1.4;
+  color: #fff;
+  max-width: 128px;
+  text-align: center;
+}
+
+.furniture-card-img {
+  border-radius: 8px;
+  margin-bottom: 16px;
+}
+
+.furniture-name {
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.color-checkbox {
+  display: inline-block;
+  margin-right: 16px;
+  cursor: pointer;
+  height: 24px;
+}
+
+.color-checkbox input {
+  display: none;
+}
+
+.color-checkbox .color-box {
+  width: 24px;
+  height: 24px;
+  border-radius: 64px;
+  border: 1px solid rgb(219, 219, 219);
+  background-color: var(--color);
+  display: inline-block;
+  margin-bottom: 8px;
+}
+.color-options {
+  height: 24px;
+}
+.color-checkbox input:checked + .color-box {
+  border: 4px solid #838584;
+}
+
+.furniture-price {
+  font-weight: 600;
+  font-size: 20px;
+  margin-bottom: 16px;
+}
+
+.button-furnitures-detail {
+  font-weight: 500;
+  width: 100%;
+  box-shadow: 0 1px 2px 0 rgba(8, 12, 9, 0.05),
+    inset 0 -2px 1px 0 rgba(8, 12, 9, 0.05),
+    inset 0 0 0 1px rgba(8, 12, 9, 0.05);
+  margin-bottom: 34px;
+}
+
+.button-load-more-furnitures {
+  width: 100%;
+  font-weight: 500;
+  color: #fff;
+  box-shadow: 0 1px 2px 0 rgba(8, 12, 9, 0.05),
+    inset 0 -2px 1px 0 rgba(0, 0, 0, 0.2), inset 0 0 0 1px rgba(8, 12, 9, 0.15),
+    inset 0 2px 1px 0 rgba(255, 255, 255, 0.25),
+    inset 0 32px 24px 0 rgba(255, 255, 255, 0.05);
+  background: #6b0609;
+}
+
+@media screen and (min-width: 768px) {
+  .furniture-categories-list {
+    gap: 24px;
+  }
+  .furniture-categories-list-item {
+    width: calc((100% - 72px) / 4);
+  }
+  .furniture-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+  }
+  .product-card {
+    width: calc((100% - 24px) / 2);
+  }
+  .button-load-more-furnitures {
+    display: block;
+    width: 340px;
+    margin: 0 auto;
+  }
+  /* Треба щоб при переносі тексту картки були однакового розміру, не по макету */
+  .furniture-name {
+    height: 56px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .furniture-list-section {
+    padding: 80px 0;
+  }
+  .furniture-list-title {
+    font-size: 48px;
+  }
+  .furniture-categories-list-item {
+    width: 166px;
+  }
+  .product-card {
+    width: calc((100% - 72px) / 4);
+  }
+}
