@@ -13,7 +13,7 @@ import{a as l,i as L}from"./assets/vendor-weOZHO9C.js";(function(){const r=docum
           </label>
         `).join("");return`
         <li class="product-card">
-          <img src="${s}" alt="${r.name}" class="furniture-card-img"/>
+          <img src="${s}" alt="${r.name}" class="furniture-card-img" loading="lazy" decoding="async"/>
           <p class="furniture-name">${r.name}</p>
           <div class="color-options">${t}</div>
           <p class="furniture-price">${r.price} грн</p>
