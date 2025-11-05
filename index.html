@@ -16,7 +16,9 @@
 
     <!-- Css -->
     <script type="module" crossorigin src="/Project-CreativeTeam02/index.js"></script>
-    <link rel="stylesheet" crossorigin href="/Project-CreativeTeam02/assets/index-xJtOAHTR.css">
+    <link rel="modulepreload" crossorigin href="/Project-CreativeTeam02/assets/vendor-weOZHO9C.js">
+    <link rel="stylesheet" crossorigin href="/Project-CreativeTeam02/assets/vendor-DnveWo0P.css">
+    <link rel="stylesheet" crossorigin href="/Project-CreativeTeam02/assets/index-CKR05sKA.css">
   </head>
   <body>
     <!-- Header -->
@@ -31,8 +33,25 @@
 
 
       <!-- Furniture List Section -->
-      <section>
-  <!--  -->
+      <section class="furniture-list-section">
+  <div class="container">
+    <div class="furniture-list-text-section">
+      <h2 class="furniture-list-title">Наші меблі</h2>
+      <p class="furniture-list-subtitle">
+        Знайдіть ідеальні рішення для вашого інтер'єру
+      </p>
+    </div>
+    <ul class="furniture-categories-list"></ul>
+
+    <ul class="furniture-list"></ul>
+    <div class="loader"></div>
+    <button
+      type="button"
+      class="button visually-hidden button-load-more-furnitures"
+    >
+      Показати ще
+    </button>
+  </div>
 </section>
 
 
