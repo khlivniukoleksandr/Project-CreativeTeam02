@@ -1,0 +1,94 @@
+.faq-section{
+    padding: 48px 0;
+}
+
+.faq-header{
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.2;
+    letter-spacing: 0.01em;
+    text-align: center;
+}
+
+.accordion-container{
+    padding-top: 32px;
+}
+
+.faq-section .ac{
+    margin-bottom: 0;
+    border: none;
+    border-bottom: 1px solid rgba(8, 12, 9, 0.15);
+    
+}
+
+.faq-section .ac:first-child {
+    border-top: 1px solid rgba(8, 12, 9, 0.15);
+}
+
+.faq-section .ac-header{
+    font-weight: 700;
+    padding: 20px 0;
+}
+
+.faq-section .ac .ac-trigger {
+    width: 100%;
+    text-align: left;
+    padding: 20px 56px 20px 0;
+    font-size: 18px;
+    font-weight: 700;
+    background: none;
+    border: none;
+    outline: none;
+    position: relative;
+    transition: color 250ms ease;
+}
+
+.faq-section .ac .ac-trigger::after{
+    content: '';
+    background-image: url('../img/accordion-icon.svg');
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%) rotate(0deg);
+    width: 32px;
+    height: 32px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    transition: transform 250ms ease;
+}
+
+.faq-section .ac.is-active .ac-header .ac-trigger::after {
+    content: '';
+    transform: translateY(-50%) rotate(180deg);
+}
+
+.faq-section .ac .ac-panel{
+    padding: 0;
+}
+
+.faq-section .ac.is-active .ac-panel{
+    padding-bottom: 24px;
+}
+
+.faq-section .ac .ac-panel .ac-text{
+    font-size: 16px;
+    padding: 0;
+}
+
+@media screen and (min-width: 768px){ 
+    .faq-section .ac {
+        min-height: 72px;
+    }
+}
+
+
+@media screen and (min-width: 1440px){
+    .faq-header {
+        font-size: 48px;
+        line-height: 1.2;
+    }
+
+        .faq-section .ac .ac-trigger {
+        cursor: pointer;
+    }
+}
