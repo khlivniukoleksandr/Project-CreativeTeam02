@@ -9,7 +9,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  position: relative; /* для прив'язки випадаючих елементів */
+  position: relative; 
 }
 
 /* Логотип */
@@ -21,7 +21,7 @@
 
 .company-icon { display: block; }
 
-/* Десктоп-навігація і десктоп-CTA за замовчуванням сховані (mobile-first) */
+
 .desktop-nav,
 .header-buy-button {
   display: none;
@@ -44,7 +44,7 @@
   stroke: #080c09;
 }
 
-/* Мобільне меню (mobile-first) */
+
 .mobile-menu-container {
   position: fixed;
   top: 67px;
@@ -81,7 +81,7 @@
 .nav-link:hover,
 .nav-link:focus { color: #6b0609; }
 
-/* Кнопка в мобільному меню */
+
 .mobile-order-btn {
   display: block;
   margin-top: 32px;
@@ -115,7 +115,7 @@
 @media (min-width: 768px) {
   .logo-link { font-size: 22px; }
 
-  /* На планшеті робимо дропдаун-меню праворуч від хедера */
+  
   .mobile-menu-container {
     position: absolute;
     top: calc(100% + 15px);
@@ -154,9 +154,8 @@
 
 /* ---------- Desktop ---------- */
 @media (min-width: 1440px) {
-  /* На десктопі приховуємо бургер та мобільне меню */
-  .burger-menu-btn,
-  .mobile-menu-container { display: none; }
+    .burger-menu-btn,
+    .mobile-menu-container { display: none; }
 
   /* Показуємо навігацію і кнопку */
   .desktop-nav { display: block; }
@@ -167,7 +166,7 @@
   }
   .desktop-nav { margin-left: auto; margin-right: 40px; }
 
-  /* Важливо: у тімліда є базовий .button. Тут лише “геометрія” */
+  
   a.button.header-buy-button {
     display: inline-flex;
     align-items: center;
@@ -199,5 +198,5 @@
 }
 
 
-/* Коли меню відкрите — блокуємо скрол сторінки */
+
 body.no-scroll { overflow: hidden; }

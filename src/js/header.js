@@ -1,11 +1,9 @@
-// src/js/header.js
 (() => {
   const menu = document.querySelector('.js-menu-container');
   const btn = document.querySelector('.js-open-menu');
   if (!menu || !btn) return;
 
   const iconUse = btn.querySelector('use');
-  // якщо <use> відсутній — не ламаємось
   const getSpriteBase = () => {
     if (!iconUse) return null;
     const href = iconUse.getAttribute('href') || iconUse.getAttribute('xlink:href');
@@ -59,12 +57,10 @@
 
   btn.addEventListener('click', toggleMenu);
 
-  // Закривати при кліку по лінках із меню
   menu.querySelectorAll('.nav-link, .mobile-order-btn').forEach(a => {
     a.addEventListener('click', () => menu.classList.contains('is-open') && closeMenu());
   });
 
-  // Якщо розтягнули до десктопа — закриваємо
   const mq = window.matchMedia('(min-width: 1440px)');
   const handleMq = e => e.matches && menu.classList.contains('is-open') && closeMenu();
   mq.addEventListener('change', handleMq);
