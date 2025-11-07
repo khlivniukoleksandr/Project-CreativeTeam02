@@ -1,4 +1,6 @@
 import { categoryBackgroundImg, refs } from './refs';
+import Accordion from "accordion-js";
+import "accordion-js/dist/accordion.min.css";
 
 refs.loader.classList.add('visually-hidden');
 
@@ -74,3 +76,14 @@ export const hideLoader = () => {
 export const showButtonLoad = () => {
   refs.loadButton.classList.remove('visually-hidden');
 };
+
+export function renderFaqAccordion() {
+  const faqAccordion = document.querySelector('.accordion-container');
+
+  if (faqAccordion) {
+    new Accordion(faqAccordion, {
+      duration: 300,
+      showMultiple: false,
+    });
+  }
+}
