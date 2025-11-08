@@ -1,7 +1,7 @@
+
 /* ========= HERO ======== */
 .hero {
   position: relative;
-  min-height: 100vh;
   display: flex;
   align-items: center;
   color: #fff;
@@ -18,29 +18,6 @@
   margin-right: auto;
 }
 
-/* ==== HERO CONTAINER ВІДСТУПИ ==== */
-
-/* Мобільна версія */
-@media (max-width: 767px) {
-  .hero .container {
-    padding-left: 19.5px;
-    padding-right: 20.5px;
-  }
-}
-
-/* Планшетна версія */
-@media (min-width: 768px) and (max-width: 1439px) {
-  .hero .container {
-    padding-left: 31.5px;
-  }
-}
-
-/* Десктопна версія */
-@media (min-width: 1440px) {
-  .hero .container {
-    padding-left: 63px;
-  }
-}
 
 /* Фонове зображення + затемнення */
 .hero::before {
@@ -65,12 +42,14 @@
 /* Мобільна версія */
 .hero {
   background-image: url('../img/hero-fon/fon-hero-mobile.jpg');
+ height: 617px;
 }
 
 /* Планшетна */
 @media (min-width: 768px) and (max-width: 1439px) {
   .hero {
     background-image: url('../img/hero-fon/fon-hero-desktop.jpg');
+     height: 397px;
   }
 }
 
@@ -78,16 +57,16 @@
 @media (min-width: 1440px) {
   .hero {
     background-image: url('../img/hero-fon/fon-hero-desktop.jpg');
+     height: 508px;
   }
 }
 
 
-
+/* ці падінги добре тримають мені текст і він не тікає не перескакує */
 /* ======= HERO__CONTENT ====== */
 .hero__content {
   text-align: left;
 }
-
 
 /* Планшет */
 @media (min-width: 768px) and (max-width: 1439px) {
@@ -105,7 +84,7 @@
 
 /*====== HERO__TITLE ===== */
 .hero__title {
-  font-family: 'Raleway', sans-serif;
+  
   font-weight: 700;
   line-height: 1.2;
   margin: 0 0 20px;
@@ -127,9 +106,8 @@
   }
 }
 
-/* ==== HERO__SUBTITLE===== */
+   /* ==== HERO__SUBTITLE===== */
 .hero__subtitle {
-  font-family: 'Raleway', sans-serif;
   font-weight: 400;
   line-height: 1.6;
   margin: 0 0 20px;
@@ -147,7 +125,8 @@
 /* Десктоп */
 @media (min-width: 1440px) {
   .hero__subtitle {
-    width: 560px;
+    width: 560px; /* тут не ставлю 100% бо скаче текст 
+     не так як треба по макету */
   }
 }
 
@@ -157,14 +136,11 @@
   min-width: 180px;
   height: 46px;
   padding: 10px 24px;
-  border-radius: 100px;
   background-color: #6b0609;
   color: #ffffff;
-  font-family: 'Raleway', sans-serif;
   font-weight: 500;
   font-size: 16px;
   cursor: pointer;
-  border: none;
   transition: all 0.3s ease;
 }
 
@@ -178,17 +154,10 @@
 /* Планшет */
 @media (min-width: 768px) and (max-width: 1439px) {
   .hero__btn {
-    min-width: 200px;
+   min-width:209px ; 
   }
 }
-
 /* Десктоп */
-@media (min-width: 1440px) {
-  .hero__btn {
-    min-width: 220px;
-  }
-}
-
 
 
 
