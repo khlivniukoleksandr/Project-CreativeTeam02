@@ -35,12 +35,12 @@
 /* Мобільна версія */
 .hero {
   height: 617px;
-  background-image: url('./img/hero-fon/fon-hero-desktop.jpg');
+  background-image: url('/img/hero-fon/fon-hero-desktop.jpg');
   background-image: image-set(
-    url('./img/hero-fon/fon-hero-desktop-webp.webp') type('image/webp') 1x,
-    url('./img/hero-fon/fon-hero-desktop@2x-webp.webp') type('image/webp') 2x,
-    url('./img/hero-fon/fon-hero-desktop.jpg') type('image/jpeg') 1x,
-    url('./img/hero-fon/hero-desktop@2x.jpg') 2x
+    url('/img/hero-fon/fon-hero-desktop-webp.webp') type('image/webp') 1x,
+    url('/img/hero-fon/fon-hero-desktop@2x-webp.webp') type('image/webp') 2x,
+    url('/img/hero-fon/fon-hero-desktop.jpg') type('image/jpeg') 1x,
+    url('/img/hero-fon/hero-desktop@2x.jpg') 2x
   );
 }
 
