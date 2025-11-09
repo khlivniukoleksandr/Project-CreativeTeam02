@@ -23,7 +23,7 @@
     <script type="module" crossorigin src="/Project-CreativeTeam02/index.js"></script>
     <link rel="modulepreload" crossorigin href="/Project-CreativeTeam02/assets/vendor-B8rI0ALB.js">
     <link rel="stylesheet" crossorigin href="/Project-CreativeTeam02/assets/vendor-DboR7jFM.css">
-    <link rel="stylesheet" crossorigin href="/Project-CreativeTeam02/assets/index-Dy5FR4k_.css">
+    <link rel="stylesheet" crossorigin href="/Project-CreativeTeam02/assets/index-CdehDH6R.css">
   </head>
 
   <body>
@@ -270,6 +270,9 @@
             class="modal-field-input"
             placeholder="Дмитро"
           />
+          <p class="name-required-message visually-hidden">
+            This is required field
+          </p>
         </div>
       </div>
 
@@ -278,11 +281,16 @@
         <div class="modal-input-wrapper">
           <input
             id="modal-order-tel"
-            type="text"
+            type="tel"
             name="modal-order-tel"
             class="modal-field-input"
             placeholder="38 099 123 22 11"
+            inputmode="numeric"
+            pattern="\d+"
           />
+          <p class="tel-required-message visually-hidden">
+            This is required field
+          </p>
         </div>
       </div>
       <div class="modal-form-field">
@@ -295,7 +303,6 @@
             name="modal-order-comment"
             class="modal-field-textarea"
             placeholder="Введіть ваш коментар"
-            required
           ></textarea>
         </div>
       </div>
