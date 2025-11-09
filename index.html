@@ -18,7 +18,7 @@
     <script type="module" crossorigin src="/Project-CreativeTeam02/index.js"></script>
     <link rel="modulepreload" crossorigin href="/Project-CreativeTeam02/assets/vendor-BtZwNgFY.js">
     <link rel="stylesheet" crossorigin href="/Project-CreativeTeam02/assets/vendor-DgtMbkff.css">
-    <link rel="stylesheet" crossorigin href="/Project-CreativeTeam02/assets/index-DJOsL8Gr.css">
+    <link rel="stylesheet" crossorigin href="/Project-CreativeTeam02/assets/index-Csqhxlw0.css">
   </head>
   <body>
     <!-- Header -->
@@ -149,7 +149,62 @@
     
 
     <!-- Orders Modal -->
-    
+    <div class="backdrop" data-modal>
+  <div class="modal">
+    <button type="button" class="modal-close-btn" data-modal-close>
+      <svg class="modal-icon-close" width="32" height="32">
+        <use href="/Project-CreativeTeam02/assets/icons-wxo1Sn7Y.svg#icon-x"></use>
+      </svg>
+    </button>
+    <h2 class="modal-title">Замовити</h2>
+    <form class="modal-form">
+      <div class="modal-form-field">
+        <label class="modal-iput-lable" for="modal-order-name"> Ім'я* </label>
+        <div class="modal-input-wrapper">
+          <input
+            id="modal-order-name"
+            type="text"
+            name="user-name"
+            class="modal-field-input"
+            placeholder="Дмитро"
+          />
+        </div>
+      </div>
+
+      <div class="modal-form-field">
+        <label class="modal-iput-lable" for="modal-order-tel"> Телефон* </label>
+        <div class="modal-input-wrapper">
+          <input
+            id="modal-order-tel"
+            type="text"
+            name="modal-order-tel"
+            class="modal-field-input"
+            placeholder="38 099 123 22 11"
+          />
+        </div>
+      </div>
+      <div class="modal-form-field">
+        <label class="modal-iput-lable" for="modal-order-comment">
+          Коментар
+        </label>
+        <div class="modal-input-wrapper">
+          <textarea
+            id="modal-order-comment"
+            name="modal-order-comment"
+            class="modal-field-textarea"
+            placeholder="Введіть ваш коментар"
+            required
+          ></textarea>
+        </div>
+      </div>
+
+      <button type="submit" class="button modal-field-btn-send">
+        Надіслати заявку
+      </button>
+    </form>
+  </div>
+</div>
+
 
     <!-- Footer -->
     <footer>
