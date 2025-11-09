@@ -56,7 +56,31 @@
   background: #f2f2f2;
 }
 
-.swiper-horizontal > .swiper-pagination-bullets,
+.swiper-button-next:hover,
+.swiper-button-next:focus,
+.swiper-button-prev:hover,
+.swiper-button-prev:focus {
+  background: #975052;
+}
+
+.swiper-button-next:hover svg,
+.swiper-button-next:focus svg,
+.swiper-button-prev:hover svg,
+.swiper-button-prev:focus svg {
+  fill: #FFFFFF;
+}
+
+.swiper-button-next:active,
+.swiper-button-prev:active {
+  background: #6B0609;
+}
+
+.swiper-button-next:active svg,
+.swiper-button-prev:active svg {
+  fill: #FFFFFF;
+}
+
+.swiper-horizontal>.swiper-pagination-bullets,
 .feedback-swiper .swiper-pagination-horizontal.swiper-pagination-bullets {
   &.swiper-pagination-bullets-dynamic {
     left: 4px;

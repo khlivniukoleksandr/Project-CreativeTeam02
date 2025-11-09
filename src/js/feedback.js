@@ -94,6 +94,7 @@ export const renderFeedback = function (data) {
     pagination: {
       el: '.swiper-pagination',
       dynamicBullets: true,
+      clickable: true,
     },
     navigation: {
       nextEl: '.swiper-button-next',
