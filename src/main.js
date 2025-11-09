@@ -7,6 +7,7 @@ import { refs } from './js/refs';
 import {
   createGallery,
   hideLoader,
+  renderFaqAccordion,
   renderProducts,
   showButtonLoad,
   showLoader,
@@ -79,3 +80,5 @@ export const onCategoryClick = async event => {
 };
 
 refs.categoryList.addEventListener('click', onCategoryClick);
+
+renderFaqAccordion();

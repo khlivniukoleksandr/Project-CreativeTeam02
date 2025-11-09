@@ -21,5 +21,6 @@ export const fetchFurniture = async (page = 1, categoryId = null) => {
       category: categoryId,
     },
   });
+  console.log(data);
   return data;
 };
