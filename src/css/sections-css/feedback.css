@@ -1,115 +1,104 @@
 .feedback-section {
-    padding: 64px 0;
-    color: #080c09;
-    font-family: "Raleway", sans-serif;
+  padding: 64px 0;
 }
 
 .feedback-section-container {
-    padding: 0 20px;
+  padding: 0 20px;
 }
 
 .feedback-title {
-    font-weight: 700;
-    font-size: 36px;
-    line-height: 1.2;
-    letter-spacing: 0.01em;
-    margin-bottom: 24px;
-
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.2;
+  letter-spacing: 0.01em;
+  margin-bottom: 24px;
 }
 
 .feedback-description {
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 1.6;
-    margin-bottom: 80px;
-
+  margin-bottom: 80px;
 }
 
 .feedback-section .rating {
-    justify-content: flex-start;
-    margin: 0 0 24px 0;
+  justify-content: flex-start;
+  margin: 0 0 24px 0;
 }
 
 .feedback-section .star-container {
-    margin: 0;
-    gap: 4px;
+  margin: 0;
+  gap: 4px;
 }
 
 .feedback-section .feedback-text {
-    margin-bottom: 24px;
-    font-weight: 500;
-    font-size: 20px;
-    line-height: 1.6;
+  margin-bottom: 24px;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.6;
 }
 
 .feedback-section-container .feedback-name {
-    margin-bottom: 48px;
-    font-weight: 700;
-    font-size: 16px;
-    line-height: 1.6;
+  margin-bottom: 48px;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.6;
 }
 
 .feedback-swiper {
-    width: 100%;
+  width: 100%;
 }
-
-
 
 .swiper-button-next,
 .swiper-button-prev {
-    border: 1px solid rgba(8, 12, 9, 0.15);
-    border-radius: 100px;
-    padding: 12px;
-    width: 48px;
-    height: 48px;
-    background: #f2f2f2;
+  border: 1px solid rgba(8, 12, 9, 0.15);
+  border-radius: 100px;
+  padding: 12px;
+  width: 48px;
+  height: 48px;
+  background: #f2f2f2;
 }
 
-.swiper-horizontal>.swiper-pagination-bullets,
+.swiper-horizontal > .swiper-pagination-bullets,
 .feedback-swiper .swiper-pagination-horizontal.swiper-pagination-bullets {
-    &.swiper-pagination-bullets-dynamic {
-        left: 4px;
-    }
-
-
+  &.swiper-pagination-bullets-dynamic {
+    left: 4px;
+  }
 }
 
 .feedback-swiper .swiper-pagination-bullet-active {
-    background: #080C09;
+  background: #080c09;
 }
 
 .feedback-section-container .rating.color-default .star-container .star svg {
-    fill: #080C09 !important;
+  fill: #080c09 !important;
 }
 
-@media screen and (min-width:769px) {
-    .feedback-section-container .feedback-name {
-        margin-bottom: 80px;
-    }
+@media screen and (min-width: 768px) {
+  .feedback-section-container .feedback-name {
+    margin-bottom: 80px;
+  }
 
-    .feedback-swiper .swiper-slide {
-        padding-right: 48px;
-    }
+  .feedback-swiper .swiper-slide {
+    padding-right: 48px;
+  }
 
-    .feedback-section-container {
-        padding: 0 32px;
-    }
+  .feedback-section-container {
+    padding: 0 32px;
+  }
 
-    .feedback-section {
-        padding: 32px 0;
-    }
+  .feedback-section {
+    padding: 32px 0;
+  }
 }
 
-@media screen and (min-width:1440px) {
-    .feedback-swiper .swiper-slide {
-        padding-right: 24px;
-    }
+@media screen and (min-width: 1440px) {
+  .feedback-swiper .swiper-slide {
+    padding-right: 24px;
+  }
 
-    .feedback-section-container {
-        padding: 0 64px;
-    }
+  .feedback-section-container {
+    padding: 0 64px;
+  }
 
-    .feedback-section {
-        padding: 64px 0;
-    }
+  .feedback-section {
+    padding: 64px 0;
+  }
 }

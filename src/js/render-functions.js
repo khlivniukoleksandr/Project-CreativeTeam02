@@ -1,6 +1,6 @@
 import { categoryBackgroundImg, refs } from './refs';
-import Accordion from "accordion-js";
-import "accordion-js/dist/accordion.min.css";
+import Accordion from 'accordion-js';
+import 'accordion-js/dist/accordion.min.css';
 
 refs.loader.classList.add('visually-hidden');
 

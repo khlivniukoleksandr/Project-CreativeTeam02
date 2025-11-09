@@ -85,10 +85,9 @@ refs.categoryList.addEventListener('click', onCategoryClick);
 renderFaqAccordion();
 
 const createFeedbackSection = async () => {
-  const feedbackData = await fetchFeedback()
-  console.log(feedbackData.feedbacks)
+  const feedbackData = await fetchFeedback();
 
-  renderFeedback(feedbackData.feedbacks)
-}
+  renderFeedback(feedbackData.feedbacks);
+};
 
-createFeedbackSection()
+createFeedbackSection();

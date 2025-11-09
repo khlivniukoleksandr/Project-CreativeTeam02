@@ -17,7 +17,10 @@ export const refs = {
   furnitureList: document.querySelector('.furniture-list'),
   loader: document.querySelector('.loader'),
   loadButton: document.querySelector('.button-load-more-furnitures'),
+  feedbackSwiper: document.querySelector('.feedback-swiper'),
 };
+
+refs.feedbackWrapper = refs.feedbackSwiper?.querySelector('.swiper-wrapper');
 
 export const categoryBackgroundImg = {
   all,
