@@ -1,4 +1,3 @@
-
 /* ========= HERO ======== */
 .hero {
   position: relative;
@@ -10,18 +9,12 @@
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  justify-content: flex-start; 
+  justify-content: flex-start;
 }
-
-.hero .container {
-  margin-left: 0;  
-  margin-right: auto;
-}
-
 
 /* Фонове зображення + затемнення */
 .hero::before {
-  content: "";
+  content: '';
   position: absolute;
   top: 0;
   left: 0;
@@ -41,26 +34,30 @@
 /* == ФОНОВЕ ЗОБРАЖЕННЯ == */
 /* Мобільна версія */
 .hero {
-  background-image: url('../img/hero-fon/fon-hero-mobile.jpg');
- height: 617px;
+  height: 617px;
+
+  background-image: url('../img/hero-fon/fon-hero-desktop.jpg');
+  background-image: image-set(
+    url('../img/hero-fon/fon-hero-desktop-webp.webp') type('image/webp') 1x,
+    url('../img/hero-fon/fon-hero-desktop@2x-webp.webp') type('image/webp') 2x,
+    url('../img/hero-fon/fon-hero-desktop.jpg') type('image/jpeg') 1x,
+    url('../img/hero-fon/hero-desktop@2x.jpg') 2x
+  );
 }
 
 /* Планшетна */
 @media (min-width: 768px) and (max-width: 1439px) {
   .hero {
-    background-image: url('../img/hero-fon/fon-hero-desktop.jpg');
-     height: 397px;
+    height: 397px;
   }
 }
 
 /* Десктопна */
 @media (min-width: 1440px) {
   .hero {
-    background-image: url('../img/hero-fon/fon-hero-desktop.jpg');
-     height: 508px;
+    height: 508px;
   }
 }
-
 
 /* ці падінги добре тримають мені текст і він не тікає не перескакує */
 /* ======= HERO__CONTENT ====== */
@@ -68,23 +65,8 @@
   text-align: left;
 }
 
-/* Планшет */
-@media (min-width: 768px) and (max-width: 1439px) {
-  .hero__content {
- padding: 0 40px;
-  }
-}
-
-/* Десктоп */
-@media (min-width: 1440px) {
-  .hero__content {
-    padding: 0 80px;
-  }
-}
-
 /*====== HERO__TITLE ===== */
 .hero__title {
-  
   font-weight: 700;
   line-height: 1.2;
   margin: 0 0 20px;
@@ -106,11 +88,11 @@
   }
 }
 
-   /* ==== HERO__SUBTITLE===== */
+/* ==== HERO__SUBTITLE===== */
 .hero__subtitle {
   font-weight: 400;
   line-height: 1.6;
-  margin: 0 0 20px;
+  margin-bottom: 20px;
   color: #fff;
   font-size: 18px; /* мобілка */
 }
@@ -119,29 +101,36 @@
 @media (min-width: 768px) and (max-width: 1439px) {
   .hero__subtitle {
     font-size: 18px;
+    margin-bottom: 32px;
+    margin-right: 144px;
   }
 }
 
 /* Десктоп */
 @media (min-width: 1440px) {
   .hero__subtitle {
-    width: 560px; /* тут не ставлю 100% бо скаче текст 
-     не так як треба по макету */
+    margin-right: 752px;
+    margin-bottom: 32px;
   }
 }
 
 /*==== HERO__BTN ==== */
 .hero__btn {
+  text-align: center;
   display: inline-block;
-  min-width: 180px;
+  width: 100%;
   height: 46px;
   padding: 10px 24px;
   background-color: #6b0609;
-  color: #ffffff;
+  color: #fff;
   font-weight: 500;
   font-size: 16px;
   cursor: pointer;
   transition: all 0.3s ease;
+  box-shadow: 0 1px 2px 0 rgba(8, 12, 9, 0.05),
+    inset 0 -2px 1px 0 rgba(0, 0, 0, 0.2), inset 0 0 0 1px rgba(8, 12, 9, 0.15),
+    inset 0 2px 1px 0 rgba(255, 255, 255, 0.25),
+    inset 0 32px 24px 0 rgba(255, 255, 255, 0.05);
 }
 
 /* Ховер */
@@ -152,14 +141,14 @@
 }
 
 /* Планшет */
-@media (min-width: 768px) and (max-width: 1439px) {
+@media (min-width: 768px) {
   .hero__btn {
-   min-width:209px ; 
+    width: 209px;
+    padding: 10px 24px;
+    text-wrap: nowrap;
   }
 }
 /* Десктоп */
-
-
 
 /*  (мобільна версія) — перенос text видно */
 .mobile-br {
@@ -179,4 +168,3 @@
     display: inline;
   }
 }
-
