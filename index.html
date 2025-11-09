@@ -23,7 +23,7 @@
     <script type="module" crossorigin src="/Project-CreativeTeam02/index.js"></script>
     <link rel="modulepreload" crossorigin href="/Project-CreativeTeam02/assets/vendor-B8rI0ALB.js">
     <link rel="stylesheet" crossorigin href="/Project-CreativeTeam02/assets/vendor-DboR7jFM.css">
-    <link rel="stylesheet" crossorigin href="/Project-CreativeTeam02/assets/index-CdehDH6R.css">
+    <link rel="stylesheet" crossorigin href="/Project-CreativeTeam02/assets/index-Fj9pqGn7.css">
   </head>
 
   <body>
@@ -45,7 +45,77 @@
       </symbol>
     </svg>
     <!-- Header -->
-    <header></header>
+    <header class="header" id="header">
+  <div class="container header-container">
+    <a href="./index.html" class="logo-link" aria-label="Логотип компанії">
+      <svg class="company-icon" width="159" height="70" aria-hidden="true">
+        <use href="/Project-CreativeTeam02/assets/icons-BgtWiL_3.svg#icon-logotype"></use>
+      </svg>
+    </a>
+
+    <nav class="desktop-nav desktop-only" aria-label="Основна навігація">
+      <ul class="nav-list">
+        <li class="nav-list-item">
+          <a href="#furniture" class="nav-link">Наші меблі</a>
+        </li>
+        <li class="nav-list-item">
+          <a href="#about-us" class="nav-link">Про нас</a>
+        </li>
+        <li class="nav-list-item">
+          <a href="#FAQ" class="nav-link">Часті питання</a>
+        </li>
+        <li class="nav-list-item">
+          <a href="#feedback" class="nav-link">Відгуки</a>
+        </li>
+      </ul>
+    </nav>
+
+    <a href="#furniture" class="header-buy-button desktop-only">До покупок</a>
+
+    <button
+      type="button"
+      class="burger-menu-btn mobile-only js-open-menu"
+      aria-expanded="false"
+      aria-controls="mobile-menu"
+      aria-label="Відкрити меню"
+    >
+      <svg class="burger-icon" width="32" height="32" aria-hidden="true">
+        <use href="/Project-CreativeTeam02/assets/icons-BgtWiL_3.svg#icon-menu"></use>
+      </svg>
+    </button>
+
+    <div
+      class="mobile-menu-container js-menu-container"
+      id="mobile-menu"
+      role="dialog"
+      aria-modal="true"
+      aria-hidden="true"
+    >
+      <div class="mobile-menu-content" tabindex="-1">
+        <nav aria-label="Мобільна навігація">
+          <ul class="mobile-menu-list">
+            <li>
+              <a href="#furniture" class="nav-link js-close-menu">Наші меблі</a>
+            </li>
+            <li>
+              <a href="#about-us" class="nav-link js-close-menu">Про нас</a>
+            </li>
+            <li>
+              <a href="#FAQ" class="nav-link js-close-menu">Часті питання</a>
+            </li>
+            <li>
+              <a href="#feedback" class="nav-link js-close-menu">Відгуки</a>
+            </li>
+          </ul>
+        </nav>
+
+        <a href="#furniture" class="button mobile-order-btn js-close-menu"
+          >До покупок</a
+        >
+      </div>
+    </div>
+  </div>
+</header>
 
 
     <main>
@@ -72,7 +142,7 @@
 
 
       <!-- Furniture List Section -->
-      <section class="furniture-list-section">
+      <section class="furniture-list-section" id="furniture">
   <div class="container">
     <div class="furniture-list-text-section">
       <h2 class="furniture-list-title">Наші меблі</h2>
@@ -95,7 +165,7 @@
 
 
       <!-- About Us Section -->
-      <section class="about-us">
+      <section class="about-us" id="about-us">
   <div class="container about-us-container">
     <div class="about-us-content">
       <h2 class="about-us-title">Про Меблерію</h2>
@@ -141,7 +211,7 @@
 
 
       <!-- FAQ Section -->
-      <section class="faq-section">
+      <section class="faq-section" id="FAQ">
   <div class="container">
     <h2 class="faq-header">Часті питання</h2>
     <div class="accordion-container accordion-position-container">
