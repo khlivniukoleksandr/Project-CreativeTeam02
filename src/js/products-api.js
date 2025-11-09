@@ -21,6 +21,12 @@ export const fetchFurniture = async (page = 1, categoryId = null) => {
       category: categoryId,
     },
   });
-  console.log(data);
   return data;
 };
+
+export async function fetchFurnitureDetails(id) {
+  try {
+    const response = await axios(`${ENDPOINTS.FURNITURES}/${id}`);
+    return response.data;
+  } catch (error) {}
+}

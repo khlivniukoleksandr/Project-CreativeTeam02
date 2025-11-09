@@ -29,6 +29,12 @@
   min-height: 42px;
   transition: 0.3s ease;
   padding: 10px 24px;
+  transition: all 0.3s ease;
+}
+
+.button:hover {
+  transform: scale(1.03);
+  opacity: 0.5;
 }
 main {
   background-color: #fff;

@@ -18,6 +18,12 @@ export const refs = {
   loader: document.querySelector('.loader'),
   loadButton: document.querySelector('.button-load-more-furnitures'),
   feedbackSwiper: document.querySelector('.feedback-swiper'),
+  modalBackdrop: document.querySelector('.modal-furniture-backdrop'),
+  modalGallery: document.querySelector('.modal-furniture-gallery'),
+  modalInfo: document.querySelector('.modal-furniture-info'),
+  makeOrderButton: document.querySelector('.modal-furniture-btn'),
+  orderModal: document.querySelector('.backdrop'),
+  orderModalForm: document.querySelector('.modal-form'),
 };
 
 refs.feedbackWrapper = refs.feedbackSwiper?.querySelector('.swiper-wrapper');
@@ -37,3 +43,5 @@ export const categoryBackgroundImg = {
   '66504a50a1b2c3d4e5f6a7ba': bed,
   '66504a50a1b2c3d4e5f6a7bc': chair,
 };
+
+export const stars = {};

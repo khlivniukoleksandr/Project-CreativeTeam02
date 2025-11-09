@@ -1,44 +1,311 @@
-.header {
-  padding: 20px 0;
+/* ======================= VARS ======================= */
+:root {
+  /* єдина точка правди для висоти хедера */
+  --header-h: 67px;
 }
-.nav {
+
+/* ======================= BASE ======================= */
+.header {
+  position: relative;
+  z-index: 1000;
+  background: #fff; /* щоб фон хедера не давав сіру смугу */
+}
+
+.header-container {
   display: flex;
   justify-content: space-between;
-}
-.nav-logo {
-  display: inline-flex;
   align-items: center;
-  justify-content: center;
+  position: relative;
 }
-.nav-list {
+
+/* Logo */
+.logo-link {
   display: flex;
   align-items: center;
-  justify-content: flex-end;
-  gap: 40px;
 }
-.nav-link {
-  position: relative;
+
+.company-icon {
   display: block;
-  font-weight: 500;
-  letter-spacing: 0.02em;
-  transition: 200ms ease-in;
 }
+
+/* приховане на мобайлі */
+.desktop-nav,
+.header-buy-button {
+  display: none;
+}
+
+/* ======================= BURGER ======================= */
+.burger-menu-btn {
+  background: transparent;
+  border: none;
+  padding: 0;
+  line-height: 0;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.burger-icon {
+  display: block;
+  /* ВИПРАВЛЕНО: Розмір іконки бургер-меню по макету */
+  width: 32px;
+  height: 32px;
+  stroke: #080c09;
+}
+
+/* ======================= (RESERVE) BACKDROP NODE ======================= */
+/* Не використовується, залишено як запасний варіант */
+.mobile-menu-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 250ms ease;
+  z-index: 998;
+}
+.mobile-menu-backdrop.is-open {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* ======================= MOBILE MENU (mobile-first) ======================= */
+.mobile-menu-container {
+  position: fixed;
+
+  /* cинхрон з хедером; -1px прибирає тонку смугу */
+  top: calc(var(--header-h) - 1px);
+  left: 0;
+  width: 100%;
+  height: calc(100% - var(--header-h) + 1px);
+
+  background-color: #ffffff;
+  z-index: 999;
+
+  /* слайд з правого краю на мобільних */
+  transform: translateX(100%);
+  transition: transform 250ms ease, opacity 250ms ease;
+  opacity: 0;
+  pointer-events: none;
+
+  /* без заокруглень, щоб не було щілин під хедером */
+  border-radius: 0;
+}
+
+.mobile-menu-container.is-open {
+  transform: translateX(0);
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.mobile-menu-content {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  padding-top: 32px;
+  padding-bottom: 16px;
+}
+
+.mobile-menu-list {
+  text-align: center;
+}
+
+.mobile-menu-list li:not(:last-child) {
+  margin-bottom: 24px;
+}
+
+.nav-link {
+  padding: 8px 0;
+  font-weight: 600;
+  transition: color 250ms ease;
+}
+
 .nav-link:hover,
 .nav-link:focus {
-  color: #747bff;
+  color: #6b0609;
 }
-.nav-link::after {
+
+.mobile-order-btn {
+  display: inline-block;
+  padding: 8px 0;
+  background-color: #6b0609;
+
+  width: 100%;
+  max-width: 335px;
+  margin: 0 auto;
+  margin-top: 32px;
+
+  color: #fff;
+  text-align: center;
+  font-weight: 500;
+  font-size: 16px;
+  cursor: pointer;
+  box-shadow: 0 1px 2px 0 rgba(8, 12, 9, 0.05),
+    inset 0 -2px 1px 0 rgba(0, 0, 0, 0.2), inset 0 0 0 1px rgba(8, 12, 9, 0.15),
+    inset 0 2px 1px 0 rgba(255, 255, 255, 0.25),
+    inset 0 32px 24px 0 rgba(255, 255, 255, 0.05);
+  transition: opacity 250ms ease, transform 200ms ease;
+}
+
+.mobile-order-btn:hover,
+.mobile-order-btn:focus {
+  opacity: 0.5;
+  transform: translateY(-2px);
+}
+
+.mobile-order-btn:active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Заборона скролу при відкритому меню */
+body.no-scroll {
+  overflow: hidden;
+}
+
+/* ======================= TABLET (>=768) ======================= */
+@media (min-width: 768px) {
+  /* Відступи для .header-container на планшеті */
+  .header-container {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .desktop-nav {
+    display: none;
+  }
+  .burger-menu-btn {
+    display: flex;
+  }
+
+  /* картка меню справа ПІД хедером — без щілин і без тіні */
+  .mobile-menu-container {
+    position: fixed;
+    top: calc(var(--header-h) - 1px);
+    right: 0;
+    left: auto;
+
+    /* ВИПРАВЛЕНО: Ширина меню по макету */
+    width: 249px;
+    max-width: 249px;
+
+    height: auto;
+    max-height: calc(100vh - var(--header-h) + 1px);
+    overflow-y: auto;
+
+    background: #ffffff;
+    box-shadow: none;
+    border-radius: 8px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 8px;
+
+    transform: translateY(-12px);
+    opacity: 0;
+    pointer-events: none;
+    transition: transform 200ms ease, opacity 200ms ease;
+  }
+
+  .mobile-menu-container.is-open {
+    transform: translateY(0);
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  .mobile-menu-content {
+    /* Відступи по макету (16px зверху/знизу, 8px з боків) */
+    padding: 16px 8px;
+    /* Скидаємо мобільні стилі */
+    padding-top: 16px;
+    padding-bottom: 16px;
+    height: auto; /* Дозволяємо вмісту визначати висоту */
+  }
+
+  .mobile-menu-list {
+    text-align: right;
+    /* Відступ між списком і кнопкою */
+    margin-bottom: 32px;
+  }
+
+  .mobile-menu-list li:not(:last-child) {
+    /* Відступ між пунктами меню */
+    margin-bottom: 24px;
+  }
+  .mobile-menu-list li {
+    margin-right: 32px;
+  }
+
+  .mobile-order-btn {
+    width: 168px;
+    height: 36px;
+    padding: 8px 16px;
+    /* Центруємо кнопку */
+    /* Скидаємо мобільний відступ */
+    margin-top: 0;
+    display: inline-block;
+    margin: 0 auto;
+  }
+}
+
+/* ======================= DESKTOP (>=1440) ======================= */
+@media (min-width: 1440px) {
+  /* Відновлюємо відступи .container для десктопа */
+  .header-container {
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+
+  .burger-menu-btn,
+  .mobile-menu-container,
+  .mobile-menu-backdrop {
+    display: none;
+  }
+  .desktop-nav {
+    display: block;
+  }
+  .desktop-nav .nav-list {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+  }
+  .desktop-nav {
+    margin-left: auto;
+    margin-right: 40px;
+  }
+  a.header-buy-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 129px;
+    height: 42px;
+    padding: 8px 20px;
+    border-radius: 100px;
+    background-color: #6b0609;
+    color: #ffffff;
+    font-weight: 500;
+    font-size: 16px;
+    text-decoration: none;
+    box-shadow: 0 1px 2px rgba(8, 12, 9, 0.05),
+      inset 0 -2px 1px rgba(0, 0, 0, 0.2), inset 0 0 0 1px rgba(8, 12, 9, 0.15),
+      inset 0 2px 1px rgba(49, 47, 47, 0.25),
+      inset 0 32px 24px rgba(255, 255, 255, 0.05);
+  }
+}
+
+/* ======================= BACKDROP (CSS-only) ======================= */
+body::before {
   content: '';
-  position: absolute;
+  position: fixed;
+  top: calc(var(--header-h) - 1px);
+  left: 0;
+  right: 0;
   bottom: 0;
-  left: 50%;
-  transform: translateX(-50%) translateY(100%);
-  width: 110%;
-  height: 4px;
-  border-radius: 4px;
-  transform-origin: center;
-  animation: stretch 400ms cubic-bezier(0.68, -0.55, 0.27, 1.55) 200ms both;
+  background: rgba(0, 0, 0, 0.45);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 250ms ease;
+  z-index: 998;
 }
-.nav-link.active::after {
-  background: #747bff;
+body.no-scroll::before {
+  opacity: 1;
+  pointer-events: auto;
 }
