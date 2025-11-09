@@ -1,9 +1,12 @@
 import { activeFirstCategory } from './helpers';
-import { fetchCategories, fetchFurniture, getPage } from './products-api';
+import { fetchCategories, fetchFurniture, fetchFurnitureDetails, getPage } from './products-api';
 import { refs } from './refs';
 import {
   hideLoader,
+  initModalFurniture,
+  openModalFurniture,
   renderCategories,
+  renderFurnitureModal,
   renderProducts,
   showButtonLoad,
   showLoader,
@@ -32,4 +35,11 @@ export const getProducts = async () => {
   }
   hideLoader();
   showButtonLoad();
+};
+
+export const getIdProduct = async id => {
+  const data = await fetchFurnitureDetails(id);
+  renderFurnitureModal(data);
+  openModalFurniture();
+  initModalFurniture();
 };
