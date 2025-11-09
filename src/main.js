@@ -1,7 +1,7 @@
 import iziToast from 'izitoast';
 import 'izitoast/dist/css/iziToast.min.css';
 import { LIMIT } from './js/constants';
-import { getCategories, getProducts } from './js/handlers';
+import { getCategories, getIdProduct, getProducts } from './js/handlers';
 import { fetchFurniture, getPage, incrementPage } from './js/products-api';
 import { refs } from './js/refs';
 import {
@@ -91,3 +91,16 @@ const createFeedbackSection = async () => {
 };
 
 createFeedbackSection();
+
+const furnitureListID = refs.furnitureList;
+furnitureListID.addEventListener('click', event => {
+  if (event.target.classList.contains('button-furnitures-detail')) {
+    const productCard = event.target.closest('.product-card');
+    if (productCard) {
+      refs.modalGallery.innerHTML = '';
+      refs.modalInfo.innerHTML = '';
+      const productId = productCard.dataset.id;
+      getIdProduct(productId);
+    }
+  }
+});

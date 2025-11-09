@@ -1,0 +1,263 @@
+.is-hidden {
+  display: none;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.modal-furniture-backdrop {
+  position: fixed;
+  display: flex;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.25);
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  overflow: auto;
+  box-sizing: border-box;
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-furniture-container {
+  width: 335px;
+  max-width: 100vw;
+  max-height: 95vh;
+  background: white;
+  border-radius: 16px;
+  overflow-y: auto;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
+  position: relative;
+  min-width: 0;
+}
+
+.modal-furniture-content {
+  padding-top: 48px;
+  padding-bottom: 44px;
+}
+.modal-furniture-close-btn {
+  position: absolute;
+  display: flex;
+  top: 16px;
+  right: 16px;
+  width: 32px;
+  height: 32px;
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+.modal-furniture-close-btn:hover,
+.modal-furniture-close-btn:focus {
+  opacity: 0.5;
+}
+
+.modal-furniture-gallery {
+  padding-top: 16px;
+  margin-bottom: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.modal-furniture-gallery-main-image {
+  width: 100%;
+  height: 297px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.modal-furniture-gallery-thumbs {
+  display: flex;
+  gap: 16px;
+  margin: auto;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.modal-furniture-thumb {
+  flex: 1;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.modal-furniture-thumb:hover {
+  transform: scale(1.05);
+}
+
+.modal-furniture-title {
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 1.3;
+  letter-spacing: 0.01em;
+  margin-bottom: 8px;
+}
+
+.modal-furniture-category {
+  font-size: 16px;
+  margin-bottom: 8px;
+}
+
+.modal-furniture-price {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 1.4;
+  letter-spacing: 0.01em;
+  margin-bottom: 24px;
+}
+
+#container-rating-id {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 16px;
+}
+
+.modal-furniture-color-list {
+  height: 32px;
+  margin-bottom: 24px;
+}
+
+.modal-furniture-info-label {
+  font-size: 16px;
+  margin-bottom: 8px;
+}
+
+.modal-furniture-color {
+  border: 2px solid transparent;
+  border-radius: 50%;
+  padding: 4px;
+  cursor: pointer;
+  transition: border-color 0.2s ease;
+}
+
+.modal-furniture-color input {
+  opacity: 0;
+  position: absolute;
+}
+
+.modal-furniture-color span {
+  cursor: pointer;
+  width: 32px;
+  height: 32px;
+  border-radius: 64px;
+  border: 1px solid rgb(219, 219, 219);
+  background-color: var(--color);
+  display: inline-block;
+  margin-bottom: 24px;
+}
+
+.modal-furniture-color-list input:checked + span {
+  border: 4px solid #838584;
+}
+
+.modal-furniture-description {
+  font-size: 16px;
+  margin-bottom: 32px;
+}
+
+.modal-furniture-sizes-wrap {
+  margin-bottom: 24px;
+  display: flex;
+  gap: 4px;
+}
+.modal-furniture-info-label-sizes,
+.modal-furniture-sizes-value {
+  font-size: 16px;
+}
+
+.modal-furniture-btn {
+  color: #fff;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.6;
+  width: 100%;
+  height: 46px;
+  flex-shrink: 0;
+  box-shadow: 0 1px 2px 0 rgba(8, 12, 9, 0.05),
+    inset 0 -2px 1px 0 rgba(0, 0, 0, 0.2), inset 0 0 0 1px rgba(8, 12, 9, 0.15),
+    inset 0 2px 1px 0 rgba(255, 255, 255, 0.25),
+    inset 0 32px 24px 0 rgba(255, 255, 255, 0.05);
+  background: #6b0609;
+}
+
+.modal-furniture-btn:hover,
+.modal-furniture-btn:focus {
+  box-shadow: 0 1px 2px 0 rgba(8, 12, 9, 0.05),
+    inset 0 -2px 1px 0 rgba(0, 0, 0, 0.2), inset 0 0 0 1px rgba(8, 12, 9, 0.15),
+    inset 0 2px 1px 0 rgba(255, 255, 255, 0.25),
+    inset 0 32px 24px 0 rgba(255, 255, 255, 0.05);
+  background: #6b0609;
+  opacity: 0.5;
+}
+
+@media screen and (min-width: 768px) {
+  .modal-furniture-container {
+    width: 704px;
+  }
+
+  .modal-furniture-thumb {
+    height: 197px;
+    width: 312px;
+  }
+
+  .modal-furniture-btn {
+    width: 310px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .modal-furniture-container {
+    width: 1090px;
+    max-height: 100vh;
+    overflow-y: auto;
+    padding: 0;
+  }
+
+  .modal-furniture-content {
+    display: flex;
+    gap: 40px;
+    padding: 64px;
+    align-items: flex-start;
+    flex-grow: 1;
+  }
+
+  .modal-furniture-gallery {
+    flex-basis: 58%;
+    max-width: 582px;
+    padding-top: 0;
+    margin-bottom: 0;
+    gap: 16px;
+  }
+
+  .modal-furniture-gallery-main-image {
+    height: 308px;
+    border-radius: 12px;
+  }
+
+  .modal-furniture-info {
+    flex-basis: 42%;
+  }
+
+  .modal-furniture-title {
+    font-size: 40px;
+  }
+
+  .modal-furniture-price {
+    font-size: 32px;
+  }
+
+  .modal-furniture-info-label-size {
+    margin: 0;
+  }
+
+  .modal-furniture-description {
+    margin-bottom: 24px;
+  }
+}
