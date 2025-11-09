@@ -85,7 +85,6 @@
 
 .modal-input-wrapper {
   border: none;
-  display: flex;
   position: relative;
   margin-bottom: 24px;
 }
@@ -101,6 +100,7 @@
   height: 42px;
   background-color: rgba(13, 11, 10, 0.05);
   outline: transparent;
+  position: relative;
 }
 
 .modal-field-textarea {
@@ -176,4 +176,30 @@
     margin-right: 64px;
     margin-bottom: 64px;
   }
+}
+.no-scroll {
+  overflow: hidden;
+  height: 100%;
+  touch-action: none;
+}
+
+/* Form validation */
+
+.error-label {
+  color: red;
+}
+
+.error-input {
+  border: 1px solid red;
+}
+.error-input::placeholder {
+  color: #f92727;
+}
+
+.name-required-message,
+.tel-required-message {
+  position: absolute;
+  top: 45px;
+  color: #f92727;
+  font-size: 16px;
 }

@@ -13,6 +13,7 @@ import {
   showLoader,
 } from './js/render-functions';
 import { renderFeedback, fetchFeedback } from './js/feedback';
+import { submitOrderForm } from './js/helpers';
 
 let currentCategoryId = null;
 
@@ -104,3 +105,5 @@ furnitureListID.addEventListener('click', event => {
     }
   }
 });
+
+refs.orderModalForm.addEventListener('submit', submitOrderForm);

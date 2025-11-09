@@ -21,6 +21,9 @@ export const refs = {
   modalBackdrop: document.querySelector('.modal-furniture-backdrop'),
   modalGallery: document.querySelector('.modal-furniture-gallery'),
   modalInfo: document.querySelector('.modal-furniture-info'),
+  makeOrderButton: document.querySelector('.modal-furniture-btn'),
+  orderModal: document.querySelector('.backdrop'),
+  orderModalForm: document.querySelector('.modal-form'),
 };
 
 refs.feedbackWrapper = refs.feedbackSwiper?.querySelector('.swiper-wrapper');

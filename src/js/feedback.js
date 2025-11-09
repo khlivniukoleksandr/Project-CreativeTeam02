@@ -28,57 +28,57 @@ export const renderFeedback = function (data) {
     <div class="star-container">
         <div class="star">
             <svg class="star-filled">
-               <use href="img/icons.svg#icon-star-filled"></use>
+               <use src="img/icons.svg#icon-star-filled"></use>
             </svg>
             <svg class="star-half">
-               <use href="img/icons.svg#icon-star-half"></use>
+               <use src="img/icons.svg#icon-star-half"></use>
             </svg>
             <svg class="star-empty">
-                <use href="img/icons.svg#icon-star-empty"></use>
+                <use src="img/icons.svg#icon-star-empty"></use>
             </svg>
         </div>
         <div class="star">
             <svg class="star-filled">
-               <use href="img/icons.svg#icon-star-filled"></use>
+               <use src="img/icons.svg#icon-star-filled"></use>
             </svg>
             <svg class="star-half">
-               <use href="img/icons.svg#icon-star-half"></use>
+               <use src="img/icons.svg#icon-star-half"></use>
             </svg>
             <svg class="star-empty">
-                <use href="img/icons.svg#icon-star-empty"></use>
+                <use src="img/icons.svg#icon-star-empty"></use>
             </svg>
         </div>
         <div class="star">
             <svg class="star-filled">
-               <use href="img/icons.svg#icon-star-filled"></use>
+               <use src="img/icons.svg#icon-star-filled"></use>
             </svg>
             <svg class="star-half">
-               <use href="img/icons.svg#icon-star-half"></use>
+               <use src="img/icons.svg#icon-star-half"></use>
             </svg>
             <svg class="star-empty">
-                <use href="img/icons.svg#icon-star-empty"></use>
+                <use src="img/icons.svg#icon-star-empty"></use>
             </svg>
         </div>
         <div class="star">
             <svg class="star-filled">
-               <use href="img/icons.svg#icon-star-filled"></use>
+               <use src="img/icons.svg#icon-star-filled"></use>
             </svg>
             <svg class="star-half">
-               <use href="img/icons.svg#icon-star-half"></use>
+               <use src="img/icons.svg#icon-star-half"></use>
             </svg>
             <svg class="star-empty">
-                <use href="img/icons.svg#icon-star-empty"></use>
+                <use src="img/icons.svg#icon-star-empty"></use>
             </svg>
         </div>
         <div class="star">
             <svg class="star-filled">
-               <use href="img/icons.svg#icon-star-filled"></use>
+               <use src="img/icons.svg#icon-star-filled"></use>
             </svg>
             <svg class="star-half">
-               <use href="img/icons.svg#icon-star-half"></use>
+               <use src="img/icons.svg#icon-star-half"></use>
             </svg>
             <svg class="star-empty">
-                <use href="img/icons.svg#icon-star-empty"></use>
+                <use src="img/icons.svg#icon-star-empty"></use>
             </svg>
         </div>
     </div>

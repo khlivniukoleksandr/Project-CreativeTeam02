@@ -124,7 +124,6 @@ export const renderFurnitureModal = data => {
   `
     )
     .join('');
-  console.log(colorCheckboxes);
 
   const infoMarkup = `
     <h2 class="modal-furniture-title">${data.name}</h2>
@@ -226,5 +225,10 @@ export function initModalFurniture() {
 
   orderBtn.addEventListener('click', () => {
     closeModalFurniture();
+    setTimeout(() => {
+      refs.orderModal.classList.add('fade-in');
+      refs.orderModal.classList.add('is-open');
+      document.body.classList.add('no-scroll');
+    }, 300);
   });
 }
