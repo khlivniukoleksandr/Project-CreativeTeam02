@@ -25,6 +25,14 @@ export function closeOrderModal() {
   refs.orderModal.classList.add('fade-out');
   document.body.classList.remove('no-scroll');
 
+  nameLabel.classList.remove('error-label');
+  nameInput.classList.remove('error-input');
+  nameErrorMessage.classList.add('visually-hidden');
+
+  telLabel.classList.remove('error-label');
+  telInput.classList.remove('error-input');
+  telErrorMessage.classList.add('visually-hidden');
+
   setTimeout(() => {
     refs.orderModal.classList.remove('is-open');
     refs.orderModal.classList.remove('fade-out');

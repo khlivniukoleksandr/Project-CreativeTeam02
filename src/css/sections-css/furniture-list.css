@@ -35,11 +35,13 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: border 0.3s ease;
 }
 
 .furniture-categories-list-item:hover,
 .furniture-categories-list-item:focus {
   border: 8px solid #6b0609;
+  transform: scale(1.03);
   cursor: pointer;
 }
 
@@ -139,7 +141,6 @@
     width: 340px;
     margin: 0 auto;
   }
-  /* Треба щоб при переносі тексту картки були однакового розміру, не по макету */
   .furniture-name {
     height: 56px;
   }
