@@ -56,6 +56,7 @@ refs.loadButton.addEventListener('click', async () => {
 
 export const onCategoryClick = async event => {
   //
+
   const li = event.target.closest('.furniture-categories-list-item');
   if (!li) return;
 

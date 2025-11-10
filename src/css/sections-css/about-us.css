@@ -31,6 +31,9 @@
   .about-us {
     padding: 64px 0;
   }
+  .about-us-title {
+    margin-right: auto;
+  }
   .about-us-content {
     max-width: 647px;
     display: flex;

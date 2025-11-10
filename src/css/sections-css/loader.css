@@ -1,4 +1,5 @@
 /* HTML: <div class="loader"></div> */
+.loader-image,
 .loader {
   text-align: center;
   font-weight: bold;
@@ -6,6 +7,7 @@
   font-size: 30px;
   animation: l1 1s linear infinite alternate;
 }
+.loader-image:before,
 .loader:before {
   content: 'Loading...';
 }
