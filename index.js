@@ -13,7 +13,7 @@ import{i as I,a as m,A as U,S as z,N as G,P as V}from"./assets/vendor-B8rI0ALB.j
           </label>
         `).join("");return`
         <li class="product-card" data-id="${t._id}">
-          <img src="${s}" alt="${t.name}" class="furniture-card-img" loading="lazy" decoding="async"/>
+          <div class="image-wrap"><img src="${s}" alt="${t.name}" class="furniture-card-img" loading="lazy" decoding="async"/>
           <p class="furniture-name">${t.name}</p>
           <div class="color-options">${a}</div>
           <p class="furniture-price">${t.price} грн</p>
