@@ -21,7 +21,7 @@
       referrerpolicy="no-referrer"
     />
     <link
-      href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
     <!--  -->
@@ -30,7 +30,7 @@
     <script type="module" crossorigin src="/Project-CreativeTeam02/index.js"></script>
     <link rel="modulepreload" crossorigin href="/Project-CreativeTeam02/assets/vendor-B8rI0ALB.js">
     <link rel="stylesheet" crossorigin href="/Project-CreativeTeam02/assets/vendor-DboR7jFM.css">
-    <link rel="stylesheet" crossorigin href="/Project-CreativeTeam02/assets/index-DC6iNr4L.css">
+    <link rel="stylesheet" crossorigin href="/Project-CreativeTeam02/assets/index-Bigpsu_b.css">
   </head>
 
   <body>
@@ -128,6 +128,29 @@
     <main>
       <!-- Hero section -->
       <section class="hero">
+  <picture>
+    <!-- WebP retina -->
+    <source
+      srcset="/Project-CreativeTeam02/assets/fon-hero-desktop@2x-webp-DR-BrJrH.webp 2x, /Project-CreativeTeam02/assets/fon-hero-desktop-webp-C7YQJJEo.webp 1x"
+      type="image/webp"
+      fetchpriority="high"
+    />
+    <!-- JPEG retina  -->
+    <source
+      srcset="/Project-CreativeTeam02/assets/fon-hero-desktop@2x-C6vDCQwE.jpg 2x, /Project-CreativeTeam02/assets/fon-hero-desktop-CCH-kLOH.jpg 1x"
+      type="image/jpeg"
+      fetchpriority="high"
+    />
+
+    <img
+      src="/Project-CreativeTeam02/assets/fon-hero-desktop-CCH-kLOH.jpg"
+      alt="Ідеальний дім"
+      decoding="async"
+      class="hero-bg"
+      fetchpriority="high"
+    />
+  </picture>
+
   <div class="container">
     <div class="hero__container">
       <!-- Контент HERO -->
@@ -332,7 +355,11 @@
     <!-- Furniture details Modal -->
     <div class="modal-furniture-backdrop is-hidden" data-modal="furniture-details">
   <div class="container modal-furniture-container">
-    <button type="button" class="modal-furniture-close-btn">
+    <button
+      type="button"
+      id="button-close-modal-backdrop"
+      class="modal-furniture-close-btn"
+    >
       <svg class="modal-furniture-close-icon" width="32" height="32">
         <use href="/Project-CreativeTeam02/assets/icons-BgtWiL_3.svg#icon-close"></use>
       </svg>
@@ -414,7 +441,7 @@
     <footer>
   <div class="container footer">
     <div class="footer-left">
-      <a class="footer-logo" href="#header">
+      <a class="footer-logo" href="#header" aria-label="На головну">
         <svg class="icon icon-logo-footer" width="228px" height="97px">
           <use href="/Project-CreativeTeam02/assets/icons-BgtWiL_3.svg#icon-logotype"></use>
         </svg>
@@ -443,6 +470,7 @@
             href="https://www.youtube.com/"
             target="_blank"
             rel="noopener noreferrer"
+            aria-label="YouTube"
           >
             <svg class="icon" width="24" height="24">
               <use href="/Project-CreativeTeam02/assets/icons-BgtWiL_3.svg#icon-Youtube"></use>
@@ -454,6 +482,7 @@
             href="https://www.instagram.com/"
             target="_blank"
             rel="noopener noreferrer"
+            aria-label="Instagram"
           >
             <svg class="icon" width="24" height="24">
               <use href="/Project-CreativeTeam02/assets/icons-BgtWiL_3.svg#icon-Instagram"></use>
@@ -465,6 +494,7 @@
             href="https://www.facebook.com/"
             target="_blank"
             rel="noopener noreferrer"
+            aria-label="Facebook"
             ><svg class="icon" width="24" height="24">
               <use href="/Project-CreativeTeam02/assets/icons-BgtWiL_3.svg#icon-Facebook"></use>
             </svg>
